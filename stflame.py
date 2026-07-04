@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 import folium
-import locale
 import numpy as np
 from scipy.cluster.hierarchy import linkage, dendrogram
 from sklearn.preprocessing import StandardScaler
@@ -31,8 +30,6 @@ def format_tanggal_indo(tgl):
     }
 
     return f"{tgl.day} {bulan[tgl.month]} {tgl.year}"
-
-locale.setlocale(locale.LC_TIME, 'Indonesian')
 
 tgl = pd.to_datetime("2026-04-28")
 
